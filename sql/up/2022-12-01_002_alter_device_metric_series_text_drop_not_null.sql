@@ -1,0 +1,1 @@
+ALTER TABLE device_metric_series_text ALTER COLUMN value DROP NOT NULL;

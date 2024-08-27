@@ -1,0 +1,30 @@
+apiVersion: 1
+
+datasources:
+  - name: Postgres
+    type: postgres
+    url: postgresdb:5432
+    database: postgres
+    user: postgres
+    secureJsonData:
+      password: 'Pass1234!'
+    jsonData:
+      sslmode: 'disable' # disable/require/verify-ca/verify-full
+      maxOpenConns: 0 # Grafana v5.4+
+      maxIdleConns: 2 # Grafana v5.4+
+      connMaxLifetime: 14400 # Grafana v5.4+
+      postgresVersion: 1200 # 903=9.3, 904=9.4, 905=9.5, 906=9.6, 1000=10
+      timescaledb: false
+  - name: Promscale-PromQL
+    type: prometheus
+    access: proxy
+    url: http://promscale:9201
+  - name: Jaeger
+    type: jaeger
+    uid: jaeger-spectra
+    access: proxy
+    url: http://promscale:9201
+    basicAuth: false
+    basicAuthUser: my_user
+    editable: true
+    isDefault: false

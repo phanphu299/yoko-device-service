@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Device.Consumer.Kraft": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:49808;http://localhost:49809"
+    }
+  }
+}

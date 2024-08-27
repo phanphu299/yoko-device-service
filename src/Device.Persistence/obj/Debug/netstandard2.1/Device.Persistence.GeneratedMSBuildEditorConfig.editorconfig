@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = Device.Persistence
+build_property.ProjectDir = /Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

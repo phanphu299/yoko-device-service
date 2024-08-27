@@ -1,0 +1,1 @@
+ALTER TABLE asset_attribute_templates ADD COLUMN value varchar(255) NULL

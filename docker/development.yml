@@ -1,0 +1,27 @@
+version: "3"
+services:
+  device-service:
+    # replace username/repo:tag with your name and image details
+    build: 
+      context: ../
+      dockerfile: docker/Dockerfile 
+  device-migration:
+    # replace username/repo:tag with your name and image details
+    build: 
+      context: ../
+      dockerfile: docker/Dockerfile-migration
+  # device-migration-timeseries:
+  #   # replace username/repo:tag with your name and image details
+  #   build: 
+  #     context: .
+  #     dockerfile: Dockerfile-migration-timeseries
+  device-function:
+    # replace username/repo:tag with your name and image details
+    build: 
+      context: ../
+      dockerfile: docker/Dockerfile-function
+  device-job:
+    # replace username/repo:tag with your name and image details
+    build: 
+      context: ../
+      dockerfile: docker/Dockerfile-job       

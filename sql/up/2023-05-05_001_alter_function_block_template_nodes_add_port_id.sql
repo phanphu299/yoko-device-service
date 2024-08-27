@@ -1,0 +1,1 @@
+alter table function_block_template_nodes add column port_id uuid null;

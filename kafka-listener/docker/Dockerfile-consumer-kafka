@@ -1,0 +1,46 @@
+# FROM dxpprivate.azurecr.io/ahi-build:6.0 AS build
+# WORKDIR .
+# COPY NuGet.Config ./NuGet.Config
+# COPY device-consumer-shared/*.csproj ./device-consumer-shared/
+# COPY device-consumer-kafka/*.csproj ./device-consumer-kafka/
+# RUN dotnet restore ./device-consumer-kafka/*.csproj /property:Configuration=Release -nowarn:msb3202,nu1503
+
+# COPY device-consumer-kafka/ ./device-consumer-kafka/
+# COPY device-consumer-shared/ ./device-consumer-shared/
+# RUN dotnet publish device-consumer-kafka/*.csproj --no-restore -c Release -o /app/out
+
+# # Run time image
+# FROM dxpprivate.azurecr.io/ahi-runtime:6.0 as final
+# WORKDIR /app
+# COPY --from=build /app/out .
+
+# # ENV LD_LIBRARY_PATH=/app/out
+# # RUN apt-get update -y
+# # RUN apt-get install -y librdkafka-dev
+# # RUN apt-get install -y libc-dev
+
+# ENTRYPOINT ["dotnet", "Device.Consumer.Kafka.dll"]
+
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR .
+COPY NuGet.Config ./NuGet.Config
+COPY kafka-listener/device-consumer-kraftshared/*.csproj ./device-consumer-kraftshared/
+COPY kafka-listener/device-consumer-kraft/*.csproj ./device-consumer-kraft/
+RUN dotnet restore ./kafka-listener/device-consumer-kraft/*.csproj /property:Configuration=Release -nowarn:msb3202,nu1503
+
+COPY kafka-listener/device-consumer-kraft/ ./device-consumer-kraft/
+COPY kafka-listener/device-consumer-kraftshared/ ./device-consumer-kraftshared/
+RUN dotnet publish device-consumer-kraft/*.csproj --no-restore -c Release -o /app/out
+
+# Run time image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 as final
+WORKDIR /app
+COPY --from=build /app/out .
+
+# ENV LD_LIBRARY_PATH=/app/out
+# RUN apt-get update -y
+# RUN apt-get install -y librdkraft-dev
+# RUN apt-get install -y libc-dev
+
+ENTRYPOINT ["./Device.Consumer.Kraft"]

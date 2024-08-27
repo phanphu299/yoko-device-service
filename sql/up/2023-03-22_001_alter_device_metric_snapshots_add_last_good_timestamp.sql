@@ -1,0 +1,1 @@
+alter table device_metric_snapshots add column _lts TIMESTAMP WITHOUT TIME zone;

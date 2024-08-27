@@ -1,0 +1,1 @@
+alter table devices add column has_data_updated boolean;

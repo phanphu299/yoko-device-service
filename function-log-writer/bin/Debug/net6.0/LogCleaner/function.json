@@ -1,0 +1,16 @@
+{
+  "generatedBy": "Microsoft.NET.Sdk.Functions.Generator-4.2.0",
+  "configurationSource": "attributes",
+  "bindings": [
+    {
+      "type": "timerTrigger",
+      "schedule": "0 0 1 * * *",
+      "useMonitor": true,
+      "runOnStartup": false,
+      "name": "timer"
+    }
+  ],
+  "disabled": false,
+  "scriptFile": "../bin/Function.dll",
+  "entryPoint": "Function.Timer.LogCleaner.RunAsync"
+}

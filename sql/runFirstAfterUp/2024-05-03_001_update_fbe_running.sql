@@ -1,0 +1,2 @@
+update function_block_executions set running_trigger_asset_id = trigger_asset_id , running_trigger_attribute_id = trigger_attribute_id 
+where feature_flag = 1 and trigger_asset_id is not null and trigger_attribute_id is not null and trigger_type  = 'ASSET_ATTRIBUTE_EVENT'

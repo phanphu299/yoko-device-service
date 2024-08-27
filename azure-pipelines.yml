@@ -1,0 +1,104 @@
+resources:
+  repositories:
+  - repository: PipelineTemplateServiceRepository
+    endpoint: GitServiceAcconnection
+    type: git
+    name: AHI Pipeline Template/pipeline-template-service
+    ref: master
+  - repository: HelmChartRepository
+    endpoint: GitServiceAcconnection
+    type: git
+    name: Asset DevOps - Helm/helm-chart
+    ref: sandbox
+
+trigger:
+  branches:
+    include:
+    - features/*/develop
+    - master
+  paths:
+    include:
+      - src/*
+      - tests/*
+      - sql/*    
+    exclude:
+      - src/Device.Job/*
+
+pool:
+  name: 'DXP Hosted BE'
+
+parameters:
+  - name: SnykTestLibrary
+    displayName: Security test opensource library with Snyk
+    type: string
+    default: 'no'
+    values:
+      - 'yes'
+      - 'no'
+  - name: SnykTestContainer
+    displayName: Security test container with Snyk
+    type: string
+    default: 'no'
+    values:
+      - 'yes'
+      - 'no'  
+  - name: SnykAnalysis
+    displayName: Code analysis with Snyk
+    type: string
+    default: 'no'
+    values:
+      - 'yes'
+      - 'no'  
+  - name: SonarAnalysis
+    displayName: Code analysis with SonarCloud
+    type: string
+    default: 'yes'
+    values:
+      - 'yes'
+      - 'no'  
+  - name: IncludeApiTest
+    displayName: Include api test
+    type: string
+    default: 'yes'
+    values:
+      - 'yes'
+      - 'no'
+  - name: IncludeIntegrationTest
+    displayName: Include integration test
+    type: string
+    default: 'yes'
+    values:
+      - 'yes'
+      - 'no'
+  - name: Platform
+    displayName: Platform
+    type: string
+    default: 'Azure'
+    values:
+      - 'Azure'
+      - 'AWS'
+      - 'Alibaba'
+  - name: EnablePushStage
+    displayName: Enable push stage
+    default: false
+    type: boolean
+
+stages:
+- template: service-build-templates.yml@PipelineTemplateServiceRepository
+  parameters:
+    SnykTestLibrary: ${{ parameters.SnykTestLibrary }}
+    SnykTestContainer: ${{ parameters.SnykTestContainer }}
+    SnykAnalysis: ${{ parameters.SnykAnalysis }}
+    SonarAnalysis: ${{ parameters.SonarAnalysis }}
+    IncludeApiTest: ${{ parameters.IncludeApiTest }}
+    IncludeIntegrationTest: ${{ parameters.IncludeIntegrationTest }}
+    Platform: ${{ parameters.Platform }}
+    DockerFile: 'docker/Dockerfile'
+    DockerFileMigration: 'docker/Dockerfile-migration'
+    EnableDestroyDB: 'yes'
+    HasMigrationScript: 'yes'
+- ${{ if eq(parameters.EnablePushStage, true) }}:
+  - template: push-template.yml@PipelineTemplateServiceRepository
+    parameters:
+      Environment: "sandbox01"
+      HelmPath: "device-service"

@@ -1,0 +1,6 @@
+{
+  "extensions":[
+    { "name": "RabbitMQ", "typeName":"Microsoft.Azure.WebJobs.Extensions.RabbitMQ.RabbitMQWebJobsStartup, Microsoft.Azure.WebJobs.Extensions.RabbitMQ, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null"},
+    { "name": "Startup", "typeName":"AHI.Device.Function.Startup, Function, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"}
+  ]
+}

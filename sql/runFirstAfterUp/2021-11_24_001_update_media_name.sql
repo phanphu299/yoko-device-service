@@ -1,0 +1,1 @@
+update media set name =  split_part(blob_path, '/import/',2)

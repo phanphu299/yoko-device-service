@@ -1,0 +1,1 @@
+ALTER TABLE device_metric_snapshots ALTER COLUMN value DROP NOT NULL;

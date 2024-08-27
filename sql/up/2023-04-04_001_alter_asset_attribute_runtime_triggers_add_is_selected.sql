@@ -1,0 +1,1 @@
+alter table asset_attribute_runtime_triggers add column is_selected boolean default true;

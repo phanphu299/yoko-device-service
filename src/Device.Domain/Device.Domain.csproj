@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AHI.Infrastructure.Repository" Version="2.1.5-rc57" />
+    <PackageReference Include="AHI.Infrastructure.Service.Tag" Version="2.1.5-rc57" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,66 @@
+# Introduction
+# - Use: to upgrade UAT timescaledb installed version
+# - Interval: No (Manually)
+
+trigger:
+  branches:
+    include:
+    - none
+
+pool:
+  name: 'DXP UAT'
+
+variables:
+- group: 'UAT01 - Keyvault'
+
+parameters:
+  - name: DbType
+    displayName: Select db type to backup
+    type: string
+    default: 'device'
+    values:
+      - 'device'
+
+
+jobs:
+- job: upgradetimescaledb
+  timeoutInMinutes: 120
+  displayName: 'upgrade UAT timescaled installed version'
+
+  steps:
+  - checkout: self
+    fetchDepth: 0
+  
+  - task: Bash@3
+    condition: and(succeededOrFailed(), 'yes')
+    inputs:
+      targetType: 'inline'
+      script: |
+        DB_USER=$(Postgres-UserName)
+        DB_PASSWORD=$(Postgres-Password)
+
+        # change to backup folder
+        echo "### current backup folders"
+        cd /b
+        #pwd
+        #ls
+
+        # create backup folder
+        FOLDER_NAME=update_timescaledb_$(Build.BuildNumber)
+        echo "### create a new backup folder" $FOLDER_NAME
+        mkdir $FOLDER_NAME
+        chmod 777 $FOLDER_NAME
+        cd $FOLDER_NAME
+
+        # create db backup commands file
+        DB_TYPE='${{ parameters.DbType }}'
+        PGPASSWORD=$DB_PASSWORD psql -U $DB_USER -h $(DB_HOST) -p $(DB_PORT) -c "\l" | grep "$DB_TYPE" | \
+         awk -v prefix="PGPASSWORD=$DB_PASSWORD psql -h $(DB_HOST) -p $(DB_PORT) -U $DB_USER -c \"" \
+        '{print prefix "ALTER EXTENSION timescaledb UPDATE TO '\''2.8.1'\''\"  -d " $1}' > upgrade_timescaledb.sh
+
+        # run backup commands
+        chmod 777 upgrade_timescaledb.sh
+        cat upgrade_timescaledb.sh
+        ./upgrade_timescaledb.sh
+
+    displayName: 'upgrade UAT timescaled installed version'

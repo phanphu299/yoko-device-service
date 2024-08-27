@@ -1,0 +1,279 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/phuphan/Yokogawa/Asset Management/device-service/kafka-listener/device-consumer-kraft/Device.Consumer.Kraft.csproj": {}
+  },
+  "projects": {
+    "/Users/phuphan/Yokogawa/Asset Management/device-service/kafka-listener/device-consumer-kraft/Device.Consumer.Kraft.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/phuphan/Yokogawa/Asset Management/device-service/kafka-listener/device-consumer-kraft/Device.Consumer.Kraft.csproj",
+        "projectName": "Device.Consumer.Kraft",
+        "projectPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/kafka-listener/device-consumer-kraft/Device.Consumer.Kraft.csproj",
+        "packagesPath": "/Users/phuphan/.nuget/packages/",
+        "outputPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/kafka-listener/device-consumer-kraft/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/phuphan/Yokogawa/Asset Management/device-service/kafka-listener/NuGet.Config",
+          "/Users/phuphan/Yokogawa/Asset Management/device-service/NuGet.Config",
+          "/Users/phuphan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AssetHealthInsights/_packaging/AssetHealthInsights/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AssetHealthInsights/_packaging/AssetHealthInsights/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/phuphan/Yokogawa/Asset Management/device-service/kafka-listener/device-consumer-kraftshared/Device.Consumer.KraftShared.csproj": {
+                "projectPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/kafka-listener/device-consumer-kraftshared/Device.Consumer.KraftShared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.21.0-Preview.1, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Serilog.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "StackExchange.Redis.Extensions.AspNetCore": {
+              "target": "Package",
+              "version": "[10.2.0, )"
+            },
+            "StackExchange.Redis.Extensions.Core": {
+              "target": "Package",
+              "version": "[10.2.0, )"
+            },
+            "StackExchange.Redis.Extensions.System.Text.Json": {
+              "target": "Package",
+              "version": "[10.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/phuphan/Yokogawa/Asset Management/device-service/kafka-listener/device-consumer-kraftshared/Device.Consumer.KraftShared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/phuphan/Yokogawa/Asset Management/device-service/kafka-listener/device-consumer-kraftshared/Device.Consumer.KraftShared.csproj",
+        "projectName": "Device.Consumer.KraftShared",
+        "projectPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/kafka-listener/device-consumer-kraftshared/Device.Consumer.KraftShared.csproj",
+        "packagesPath": "/Users/phuphan/.nuget/packages/",
+        "outputPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/kafka-listener/device-consumer-kraftshared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/phuphan/Yokogawa/Asset Management/device-service/kafka-listener/NuGet.Config",
+          "/Users/phuphan/Yokogawa/Asset Management/device-service/NuGet.Config",
+          "/Users/phuphan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AssetHealthInsights/_packaging/AssetHealthInsights/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AssetHealthInsights/_packaging/AssetHealthInsights/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AHI.Infrastructure.Audit": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "AHI.Infrastructure.DataCompression": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "AHI.Infrastructure.Export": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "AHI.Infrastructure.Import": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "AHI.Infrastructure.Interceptor": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "AHI.Infrastructure.Service.Tag": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "AHI.Infrastructure.SharedKernel": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "Microsoft.Azure.Functions.Extensions": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.Azure.WebJobs.Extensions.RabbitMQ": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.NET.Sdk.Functions": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Serilog.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "StackExchange.Redis.Extensions.Core": {
+              "target": "Package",
+              "version": "[10.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

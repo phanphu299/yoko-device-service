@@ -1,0 +1,1 @@
+alter table asset_attribute_static_mapping add is_overridden BOOLEAN not null default false;

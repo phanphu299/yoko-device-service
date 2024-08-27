@@ -1,0 +1,1 @@
+ALTER TABLE devices ADD COLUMN sas_token varchar NULL;

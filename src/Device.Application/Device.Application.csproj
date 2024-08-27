@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Device.Domain\Device.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="3.1.32" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="3.1.32" />
+    <PackageReference Include="Microsoft.Azure.Devices" Version="1.37.0" />
+    <PackageReference Include="Microsoft.Azure.Devices.Client" Version="1.40.0" />
+    <PackageReference Include="Quartz" Version="3.7.0" />
+    <PackageReference Include="System.Threading.Channels" Version="6.0.0" />
+    <PackageReference Include="prometheus-net" Version="6.0.0" />
+    <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
+    <PackageReference Include="AHI.Infrastructure.Service" Version="2.1.5-rc57" />
+    <PackageReference Include="AHI.Infrastructure.Service.Dapper" Version="2.1.5-rc57" />
+    <PackageReference Include="AHI.Infrastructure.Bus.RabbitMQ" Version="2.1.5-rc57" />
+    <PackageReference Include="AHI.Infrastructure.Validation" Version="2.1.5-rc57" />
+    <PackageReference Include="AHI.Infrastructure.Interceptor" Version="2.1.5-rc57" />
+    <PackageReference Include="AHI.Infrastructure.Audit" Version="2.1.5-rc57" />
+    <PackageReference Include="AHI.Infrastructure.Security" Version="2.1.5-rc57" />
+    <PackageReference Include="AHI.Infrastructure.Cache.Redis" Version="2.1.5-rc57" />
+    <PackageReference Include="AHI.Infrastructure.Service.Tag" Version="2.1.5-rc57" />
+    <PackageReference Include="MessagePack" Version="2.5.140" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,65 @@
+resources:
+  repositories:
+  - repository: PipelineTemplateServiceRepository
+    type: git
+    name: AHI Pipeline Template/pipeline-template-service
+    ref: master
+  - repository: HelmChartRepository
+    endpoint: GitServiceAcconnection
+    type: git
+    name: Asset DevOps - Helm/helm-chart
+    ref: sandbox
+
+trigger:
+  branches:
+    include:
+    - features/*/develop
+    - master
+  paths:
+    include:
+      - src/*
+      - tests/*
+      - sql/*    
+    exclude:
+      - src/Device.Job/*
+
+pool:
+  name: 'DXP Hosted BE'
+
+parameters:
+  - name: SnykTestContainer
+    displayName: Security test container with Snyk
+    type: string
+    default: 'no'
+    values:
+      - 'yes'
+      - 'no'  
+  - name: Platform
+    displayName: Platform
+    type: string
+    default: 'Azure'
+    values:
+      - 'All'
+      - 'Azure'
+      - 'AWS'
+      - 'Alibaba'
+  - name: DockerFile
+    displayName: DockerFile
+    type: string
+    default: 'docker/Dockerfile-job'
+  - name: EnablePushStage
+    displayName: Enable push stage
+    default: false
+    type: boolean
+
+stages:
+- template: job-build-templates.yml@PipelineTemplateServiceRepository
+  parameters:
+    SnykTestContainer: ${{ parameters.SnykTestContainer }}
+    Platform: ${{ parameters.Platform }}
+    DockerFile: ${{ parameters.DockerFile }}
+- ${{ if eq(parameters.EnablePushStage, true) }}:
+  - template: push-template.yml@PipelineTemplateServiceRepository
+    parameters:
+      Environment: "sandbox01"
+      HelmPath: "device-job"

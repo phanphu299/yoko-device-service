@@ -1,0 +1,1 @@
+select delete_job (job_id ) from timescaledb_information.jobs j where proc_name  = 'usp_udp_materialize_view';

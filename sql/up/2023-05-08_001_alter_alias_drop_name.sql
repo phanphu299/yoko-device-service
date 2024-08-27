@@ -1,0 +1,2 @@
+alter table asset_attribute_alias drop column alias_asset_name;
+alter table asset_attribute_alias drop column alias_attribute_name;

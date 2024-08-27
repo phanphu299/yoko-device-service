@@ -1,0 +1,61 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+  prometheus:
+    config:
+      scrape_configs:
+        - job_name: 'device-service'
+          scrape_interval: 10s
+          static_configs:
+            - targets: ["device-service"]
+
+exporters:
+  otlp:
+    endpoint: "promscale:9202"
+    tls:
+      insecure: true
+    sending_queue:
+      queue_size: 1000000
+    timeout: 10s
+  prometheusremotewrite:
+    endpoint: "http://promscale:9201/write"
+    tls:
+      insecure: true
+  elasticsearch/trace:
+    endpoints: [https://elasticsearch:9200]
+    traces_index: trace_index
+    tls:
+      insecure: false
+      insecure_skip_verify: true
+    user: elastic
+    password: p8nLFWqmjCfq1pXZAu3x
+  elasticsearch/log:
+    endpoints: [https://elasticsearch:9200]
+    logs_index: my_log_index
+    tls:
+      insecure: false
+      insecure_skip_verify: true
+    user: elastic
+    password: p8nLFWqmjCfq1pXZAu3x
+processors:
+  batch:
+    send_batch_size: 4000
+    send_batch_max_size: 4000
+    timeout: 10s
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      exporters: [otlp,elasticsearch/trace]
+      processors: [batch]
+    metrics:
+      receivers: [otlp,prometheus]
+      processors: [batch]
+      exporters: [prometheusremotewrite]
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [elasticsearch/log]

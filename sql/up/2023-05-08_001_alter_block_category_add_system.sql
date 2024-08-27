@@ -1,0 +1,1 @@
+ALTER TABLE function_block_categories ADD COLUMN "system" BOOLEAN NOT NULL DEFAULT false;

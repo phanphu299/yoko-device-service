@@ -1,0 +1,1 @@
+ALTER TABLE assets add COLUMN retention_days int NOT NULL DEFAULT 90;

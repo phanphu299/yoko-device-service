@@ -1,0 +1,2593 @@
+{
+    "rabbit_version": "3.10.2",
+    "rabbitmq_version": "3.10.2",
+    "product_name": "RabbitMQ",
+    "product_version": "3.10.2",
+    "users": [
+        {
+            "name": "rabbitmq",
+            "password_hash": "+I3hIYRI2wuAfcS9ftQUP4ysGCs2p5+D135B6qT0RedF+rIT",
+            "hashing_algorithm": "rabbit_password_hashing_sha256",
+            "tags": [
+                "administrator"
+            ],
+            "limits": {}
+        }
+    ],
+    "vhosts": [
+        {
+            "name": "/"
+        }
+    ],
+    "permissions": [
+        {
+            "user": "rabbitmq",
+            "vhost": "/",
+            "configure": ".*",
+            "write": ".*",
+            "read": ".*"
+        }
+    ],
+    "topic_permissions": [],
+    "parameters": [],
+    "global_parameters": [
+        {
+            "name": "internal_cluster_id",
+            "value": "rabbitmq-cluster-id-nx-asjbnrPhN_Iv51YwoQg"
+        }
+    ],
+    "policies": [],
+    "queues": [
+        {
+            "name": "device.function.asset.template.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.function.table.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "alarm.function.device.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "audit.function.file.exported.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "event.function.asset.attribute.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "configuration.function.file.imported.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "broker.function.device.iot.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "broker.function.file.exported.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "broker.function.waylay.fetching.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "broker.function.device.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "dashboard.function.file.exported.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "dataset.function.dataset.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "function.audit.log.created.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "identity.function.tenant.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "training.function.training.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "broker.function.file.imported.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "master.function.tenant.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "broker.function.integration.eventhub.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "model.function.model.created.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "master.function.device.iot.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "configuration.function.file.exported.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "alarm.function.file.imported.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "user.function.user.access.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "alarm.function.alarmrule.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "master.function.device.property.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "access.control.function.user.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.function.integration.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "broker.function.lookup.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "alarm.function.file.exported.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "user.function.identity.user.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "report.function.file.exported.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "user.function.identityuser.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "broker.function.device.property.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.function.file.uploaded.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "alarm.function.asset.attribute.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "master.function.project.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "user.function.user.group.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "model.function.property.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.function.data.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "project.function.asset.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "model.function.training.status.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "identity.function.user.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.function.alarm.rule.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "project.function.user.access.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "project.function.project.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.function.asset.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "master.function.subscription.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "user.function.file.imported.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "ingestion",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.function.tracking.heart.beat.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.function.calculate.runtime.metric.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.function.calculate.runtime.attribute.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "user.function.file.exported.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "dataset.function.rawdata.split.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "master.function.integration.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "notification.function.sendemail.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.function.event.analytic.predicted.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "model.function.event.analytic.forwarded.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "user.function.organization.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "dataset.function.rawdata.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.function.file.imported.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.function.device.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "broker.function.broker.eventhub.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "project.function.property.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "model.function.dataset.status.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "access.function.asset.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "project.function.template.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "identity.function.user.subscription.changed.processingg",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "tenant.function.user.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "tenant.function.application.linked.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "master.function.broker.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "test",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.function.file.exported.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.application.event.cleanup.metric.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "broker.function.broker.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "master.function.property.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "project.function.project.created.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "model.function.datamodel.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "tenant.function.tenant.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "scheduler.function.event.sent.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "master.function.queue.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.function.media.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "model.function.queue.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "identity.function.user.create.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "user.function.user.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "model.function.model.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "master.function.device.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "alarm.function.event.alarmrule.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.function.event.signal.received",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "tenant.function.service.released.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "user.function.role.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "dataset.function.split.rawdata.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "master.function.service.released.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "model.function.relearning.job.created.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "device.function.property.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "project.function.device.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "tenant.function.subscription.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "model.function.rawdata.status.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "model.function.event.test.analytic.predicted.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        },
+        {
+            "name": "alarm.function.device.status.changed.processing",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        }
+    ],
+    "exchanges": [
+        {
+            "name": "device.application.event.asset.template.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "configuration.application.event.lookup.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+			"name": "device.application.event.device.id.changed",
+			"vhost": "/",
+			"type": "topic",
+			"durable": true,
+			"auto_delete": false,
+			"internal": false,
+			"arguments": {}
+		},
+        {
+            "name": "dashboard.application.event.file.exported",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "user.application.event.group.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "model.function.event.analytic.forwarded",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "scheduler.broker.eventhub.event.received",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "configuration.application.event.file.imported",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "alarm.application.event.file.exported",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "device.application.event.file.imported",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "dataset.application.event.rawdata.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "model.application.event.relearning.job.created",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "configuration.application.event.file.exported",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "model.application.event.model.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "ingestion-exchange",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "device.application.event.tracking.heart.beat.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "device.application.event.calculate.runtime.metric.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "device.application.event.calculate.runtime.attribute.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "dataset.application.event.dataset.status.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "training.application.event.training.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "broker.application.event.broker.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "dataset.application.event.split.rawdata.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "identity.function.event.user.create",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "scheduler.device.integration.event.received",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "identity.application.event.identity.user.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "notification.application.event.sendemail",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "model.function.event.analytic.predicted",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "audit.application.log.created",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "identity.application.event.user.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "project.application.event.project.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "broker.application.event.integration.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "access.control.application.event.organization.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "alarm.application.event.alarm.rule.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "user.application.event.user.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "device.application.event.media.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "broker.application.event.file.imported",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "scheduler.event.integration.eventhub.received",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "access.control.function.user.changed.processing",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "master.function.event.project.created",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "alarmrulescheduler.event.received",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "accesscontrol.application.event.organization.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "identity.application.event.identityuser.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "dataset.application.event.dataset.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "iot.event.received",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "tenant.application.event.user.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "broker.function.event.file.uploaded",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "tenant.application.event.application.linked",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "device.application.event.file.exported",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "tenant.function.service.released",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "user.application.event.file.imported",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "alarm.application.event.alarmrule.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "scheduler.event.received",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "identity.application.event.user.access",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "device.application.event.asset.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "device.application.event.device.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "model.application.event.queue.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "scheduler.application.event.sent",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "device.application.event.device.iot.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "model.function.event.analytic.testjob.predicted",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "user.application.event.file.exported",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "broker.application.event.file.exported",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "device.application.event.cleanup.metric",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "model.application.event.test.property.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "accesscontrol.application.event.role.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "dataset.application.event.datamodel.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "scheduler.device.integration.event.processing",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "device.application.event.template.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "model.application.event.model.created",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "model.application.event.property.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "scheduler.integration.eventhub.event.received",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "device.application.event.property.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "alarm.application.event.file.imported",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "tenant.application.event.tenant.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "master.application.event.tenant.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "tenant.application.event.subscription.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "training.application.event.training.status.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "audit.application.event.file.exported",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "device.application.event.asset.attribute.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "dataset.application.event.rawdata.status.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "report.application.event.file.exported",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "tenant.function.event.user.subscription.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "dataset.application.event.rawdata.split",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "master.application.service.release",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "access.control.application.event.role.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "device.application.event.table.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "device.application.event.device.status.changed",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "device.application.command.trigger.function.block",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        }
+    ],
+    "bindings": [
+        {
+            "source": "device.application.event.asset.template.changed",
+            "vhost": "/",
+            "destination": "device.function.asset.template.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.command.trigger.function.block",
+            "vhost": "/",
+            "destination": "function.block.asset.attribute.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "access.control.application.event.organization.changed",
+            "vhost": "/",
+            "destination": "notification.function.sendemail.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.device.id.changed",
+            "vhost": "/",
+            "destination": "alarm.function.device.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "access.control.application.event.organization.changed",
+            "vhost": "/",
+            "destination": "user.function.organization.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "access.control.application.event.role.changed",
+            "vhost": "/",
+            "destination": "user.function.role.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "access.control.function.user.changed.processing",
+            "vhost": "/",
+            "destination": "access.control.function.user.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "accesscontrol.application.event.organization.changed",
+            "vhost": "/",
+            "destination": "user.function.organization.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "accesscontrol.application.event.role.changed",
+            "vhost": "/",
+            "destination": "user.function.role.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "alarm.application.event.alarm.rule.changed",
+            "vhost": "/",
+            "destination": "device.function.alarm.rule.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "alarm.application.event.alarmrule.changed",
+            "vhost": "/",
+            "destination": "alarm.function.alarmrule.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "alarm.application.event.file.exported",
+            "vhost": "/",
+            "destination": "alarm.function.file.exported.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "alarm.application.event.file.imported",
+            "vhost": "/",
+            "destination": "alarm.function.file.imported.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "alarmrulescheduler.event.received",
+            "vhost": "/",
+            "destination": "alarm.function.event.alarmrule.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "audit.application.event.file.exported",
+            "vhost": "/",
+            "destination": "audit.function.file.exported.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "audit.application.log.created",
+            "vhost": "/",
+            "destination": "function.audit.log.created.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "broker.application.event.broker.changed",
+            "vhost": "/",
+            "destination": "broker.function.broker.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "broker.application.event.broker.changed",
+            "vhost": "/",
+            "destination": "master.function.broker.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "broker.application.event.file.exported",
+            "vhost": "/",
+            "destination": "broker.function.file.exported.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "broker.application.event.file.imported",
+            "vhost": "/",
+            "destination": "broker.function.file.imported.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "broker.application.event.integration.changed",
+            "vhost": "/",
+            "destination": "device.function.integration.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "broker.application.event.integration.changed",
+            "vhost": "/",
+            "destination": "master.function.integration.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "broker.function.event.file.uploaded",
+            "vhost": "/",
+            "destination": "device.function.file.uploaded.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "configuration.application.event.file.exported",
+            "vhost": "/",
+            "destination": "configuration.function.file.exported.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "configuration.application.event.file.imported",
+            "vhost": "/",
+            "destination": "configuration.function.file.imported.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "configuration.application.event.lookup.changed",
+            "vhost": "/",
+            "destination": "broker.function.lookup.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "dashboard.application.event.file.exported",
+            "vhost": "/",
+            "destination": "dashboard.function.file.exported.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "dataset.application.event.datamodel.changed",
+            "vhost": "/",
+            "destination": "model.function.datamodel.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "dataset.application.event.dataset.changed",
+            "vhost": "/",
+            "destination": "dataset.function.dataset.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "dataset.application.event.dataset.status.changed",
+            "vhost": "/",
+            "destination": "model.function.dataset.status.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "dataset.application.event.rawdata.changed",
+            "vhost": "/",
+            "destination": "dataset.function.rawdata.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "dataset.application.event.rawdata.split",
+            "vhost": "/",
+            "destination": "dataset.function.rawdata.split.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "dataset.application.event.rawdata.status.changed",
+            "vhost": "/",
+            "destination": "model.function.rawdata.status.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "dataset.application.event.split.rawdata.changed",
+            "vhost": "/",
+            "destination": "dataset.function.split.rawdata.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.asset.attribute.changed",
+            "vhost": "/",
+            "destination": "event.function.asset.attribute.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.asset.changed",
+            "vhost": "/",
+            "destination": "access.function.asset.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.asset.changed",
+            "vhost": "/",
+            "destination": "device.function.asset.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.asset.changed",
+            "vhost": "/",
+            "destination": "project.function.asset.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.cleanup.metric",
+            "vhost": "/",
+            "destination": "device.application.event.cleanup.metric.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.device.changed",
+            "vhost": "/",
+            "destination": "broker.function.device.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.device.changed",
+            "vhost": "/",
+            "destination": "device.function.device.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.device.changed",
+            "vhost": "/",
+            "destination": "master.function.device.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.device.changed",
+            "vhost": "/",
+            "destination": "project.function.device.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.device.iot.changed",
+            "vhost": "/",
+            "destination": "broker.function.device.iot.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.device.iot.changed",
+            "vhost": "/",
+            "destination": "master.function.device.iot.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.file.exported",
+            "vhost": "/",
+            "destination": "device.function.file.exported.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.file.imported",
+            "vhost": "/",
+            "destination": "device.function.file.imported.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.media.changed",
+            "vhost": "/",
+            "destination": "device.function.media.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.property.changed",
+            "vhost": "/",
+            "destination": "broker.function.device.property.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.property.changed",
+            "vhost": "/",
+            "destination": "device.function.property.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.property.changed",
+            "vhost": "/",
+            "destination": "master.function.device.property.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.property.changed",
+            "vhost": "/",
+            "destination": "master.function.property.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.property.changed",
+            "vhost": "/",
+            "destination": "project.function.property.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.table.changed",
+            "vhost": "/",
+            "destination": "device.function.table.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.template.changed",
+            "vhost": "/",
+            "destination": "project.function.template.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "identity.application.event.identity.user.changed",
+            "vhost": "/",
+            "destination": "user.function.identity.user.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "identity.application.event.identityuser.changed",
+            "vhost": "/",
+            "destination": "user.function.identityuser.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "identity.application.event.user.access",
+            "vhost": "/",
+            "destination": "project.function.user.access.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "identity.application.event.user.access",
+            "vhost": "/",
+            "destination": "user.function.user.access.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "identity.application.event.user.changed",
+            "vhost": "/",
+            "destination": "identity.function.user.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "identity.function.event.user.create",
+            "vhost": "/",
+            "destination": "identity.function.user.create.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "ingestion-exchange",
+            "vhost": "/",
+            "destination": "ingestion",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.tracking.heart.beat.changed",
+            "vhost": "/",
+            "destination": "device.function.tracking.heart.beat.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.calculate.runtime.metric.changed",
+            "vhost": "/",
+            "destination": "device.function.calculate.runtime.metric.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.calculate.runtime.attribute.changed",
+            "vhost": "/",
+            "destination": "device.function.calculate.runtime.attribute.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "iot.event.received",
+            "vhost": "/",
+            "destination": "device.function.data.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "master.application.event.tenant.changed",
+            "vhost": "/",
+            "destination": "identity.function.tenant.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "master.application.event.tenant.changed",
+            "vhost": "/",
+            "destination": "master.function.tenant.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "master.application.service.release",
+            "vhost": "/",
+            "destination": "master.function.service.released.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "master.function.event.project.created",
+            "vhost": "/",
+            "destination": "project.function.project.created.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "model.application.event.model.changed",
+            "vhost": "/",
+            "destination": "model.function.model.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "model.application.event.model.created",
+            "vhost": "/",
+            "destination": "model.function.model.created.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "model.application.event.property.changed",
+            "vhost": "/",
+            "destination": "model.function.property.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "model.application.event.queue.changed",
+            "vhost": "/",
+            "destination": "master.function.queue.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "model.application.event.queue.changed",
+            "vhost": "/",
+            "destination": "model.function.queue.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "model.application.event.relearning.job.created",
+            "vhost": "/",
+            "destination": "model.function.relearning.job.created.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "model.application.event.test.property.changed",
+            "vhost": "/",
+            "destination": "model.function.property.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "model.function.event.analytic.forwarded",
+            "vhost": "/",
+            "destination": "model.function.event.analytic.forwarded.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "model.function.event.analytic.testjob.predicted",
+            "vhost": "/",
+            "destination": "model.function.event.test.analytic.predicted.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "notification.application.event.sendemail",
+            "vhost": "/",
+            "destination": "notification.function.sendemail.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "notification.application.event.sendemail",
+            "vhost": "/",
+            "destination": "user.function.organization.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "project.application.event.project.changed",
+            "vhost": "/",
+            "destination": "tenant.function.service.released",
+            "destination_type": "exchange",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "project.application.event.project.changed",
+            "vhost": "/",
+            "destination": "master.function.project.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "project.application.event.project.changed",
+            "vhost": "/",
+            "destination": "project.function.project.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "report.application.event.file.exported",
+            "vhost": "/",
+            "destination": "report.function.file.exported.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "scheduler.application.event.sent",
+            "vhost": "/",
+            "destination": "scheduler.function.event.sent.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "scheduler.broker.eventhub.event.received",
+            "vhost": "/",
+            "destination": "broker.function.broker.eventhub.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "scheduler.device.integration.event.received",
+            "vhost": "/",
+            "destination": "scheduler.device.integration.event.processing",
+            "destination_type": "exchange",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "scheduler.device.integration.event.received",
+            "vhost": "/",
+            "destination": "broker.function.waylay.fetching.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "scheduler.event.integration.eventhub.received",
+            "vhost": "/",
+            "destination": "broker.function.integration.eventhub.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "scheduler.event.received",
+            "vhost": "/",
+            "destination": "broker.function.waylay.fetching.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "scheduler.integration.eventhub.event.received",
+            "vhost": "/",
+            "destination": "broker.function.integration.eventhub.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "tenant.application.event.application.linked",
+            "vhost": "/",
+            "destination": "tenant.function.application.linked.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "tenant.application.event.subscription.changed",
+            "vhost": "/",
+            "destination": "master.function.subscription.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "tenant.application.event.subscription.changed",
+            "vhost": "/",
+            "destination": "tenant.function.subscription.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "tenant.application.event.tenant.changed",
+            "vhost": "/",
+            "destination": "tenant.function.tenant.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "tenant.application.event.user.changed",
+            "vhost": "/",
+            "destination": "tenant.function.user.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "tenant.function.service.released",
+            "vhost": "/",
+            "destination": "tenant.function.service.released.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "training.application.event.training.changed",
+            "vhost": "/",
+            "destination": "training.function.training.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "training.application.event.training.status.changed",
+            "vhost": "/",
+            "destination": "model.function.training.status.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "user.application.event.file.exported",
+            "vhost": "/",
+            "destination": "user.function.file.exported.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "user.application.event.file.imported",
+            "vhost": "/",
+            "destination": "user.function.file.imported.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "user.application.event.group.changed",
+            "vhost": "/",
+            "destination": "audit.function.file.exported.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "user.application.event.group.changed",
+            "vhost": "/",
+            "destination": "user.function.user.group.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "user.application.event.user.changed",
+            "vhost": "/",
+            "destination": "identity.function.user.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "user.application.event.user.changed",
+            "vhost": "/",
+            "destination": "tenant.function.user.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "user.application.event.user.changed",
+            "vhost": "/",
+            "destination": "user.function.user.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        },
+        {
+            "source": "device.application.event.device.status.changed",
+            "vhost": "/",
+            "destination": "alarm.function.device.status.changed.processing",
+            "destination_type": "queue",
+            "routing_key": "all",
+            "arguments": {}
+        }
+    ]
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Device.Consumer.Kraft.props" />
+</Project>

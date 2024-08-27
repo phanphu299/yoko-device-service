@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Device.Job
+build_property.ProjectDir = /Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Job/

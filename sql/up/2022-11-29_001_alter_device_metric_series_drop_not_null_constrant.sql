@@ -1,0 +1,1 @@
+alter table device_metric_series alter column value drop not null;

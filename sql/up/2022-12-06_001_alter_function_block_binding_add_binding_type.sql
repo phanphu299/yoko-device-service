@@ -1,0 +1,1 @@
+alter table function_block_bindings add column binding_type varchar(10) NULL;

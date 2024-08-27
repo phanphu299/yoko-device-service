@@ -1,0 +1,1 @@
+alter table template_details add column detail_id uuid not null default uuid_generate_v4();

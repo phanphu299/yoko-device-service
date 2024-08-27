@@ -1,0 +1,19 @@
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR .
+COPY NuGet.Config ./NuGet.Config
+COPY kafka-listener/device-heartbeat-handler ./device-heartbeat-handler
+COPY kafka-listener/device-consumer-kraftshared ./device-consumer-kraftshared
+RUN dotnet restore device-heartbeat-handler/*.csproj /property:Configuration=Release -nowarn:msb3202,nu1503
+RUN dotnet publish device-heartbeat-handler/*.csproj --no-restore -c Release -o /app/out
+
+# Run time image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 as final
+WORKDIR /app
+COPY --from=build /app/out .
+
+# ENV LD_LIBRARY_PATH=/app/out
+# RUN apt-get update -y
+# RUN apt-get install -y librdkraft-dev
+# RUN apt-get install -y libc-dev
+
+ENTRYPOINT ["./Device.Heartbeat.Handler"]

@@ -1,0 +1,1 @@
+ALTER TABLE template_details ADD COLUMN expression_compile text NULL;

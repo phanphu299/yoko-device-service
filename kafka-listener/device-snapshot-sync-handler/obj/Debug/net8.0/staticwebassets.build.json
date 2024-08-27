@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "WeCs1HZowZfWKhaXTNSmf3bFok3iVSweICrzy0ksoP4=",
+  "Source": "Device.Consumer.SnapshotSyncHandler",
+  "BasePath": "_content/Device.Consumer.SnapshotSyncHandler",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

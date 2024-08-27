@@ -1,0 +1,17 @@
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR .
+COPY ./device-producer-kafka/SpamTest/SpamTest ./spammer/
+RUN dotnet restore ./spammer/*.csproj /property:Configuration=Release -nowarn:msb3202,nu1503
+RUN dotnet publish ./spammer/SpamTest.csproj --no-restore -c Release -o /app/out
+
+# Run time image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 as final
+WORKDIR /app
+COPY --from=build /app/out .
+
+# ENV LD_LIBRARY_PATH=/app/out
+# RUN apt-get update -y
+# RUN apt-get install -y librdkraft-dev
+# RUN apt-get install -y libc-dev
+
+ENTRYPOINT ["./SpamTest"]

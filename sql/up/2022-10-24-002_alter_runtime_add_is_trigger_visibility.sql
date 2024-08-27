@@ -1,0 +1,2 @@
+alter table asset_attribute_runtime_mapping ADD COLUMN is_trigger_visibility boolean;
+alter table asset_attribute_runtimes ADD COLUMN is_trigger_visibility boolean;

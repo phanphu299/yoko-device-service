@@ -1,0 +1,1 @@
+ALTER TABLE device_templates ADD CONSTRAINT uq_device_templates UNIQUE (name)

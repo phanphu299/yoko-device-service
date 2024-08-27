@@ -1,0 +1,22 @@
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR .
+COPY NuGet.Config ./NuGet.Config
+COPY kafka-listener/device-consumer-kraftshared/*.csproj ./device-consumer-kraftshared/
+COPY kafka-listener/redis-memcache-migration/*.csproj ./redis-memcache-migration/
+RUN dotnet restore ./redis-memcache-migration/*.csproj /property:Configuration=Release -nowarn:msb3202,nu1503
+
+COPY kafka-listener/redis-memcache-migration/ ./redis-memcache-migration/
+COPY kafka-listener/device-consumer-kraftshared/ ./device-consumer-kraftshared/
+RUN dotnet publish redis-memcache-migration/*.csproj --no-restore -c Release -o /app/out
+
+# Run time image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 as final
+WORKDIR /app
+COPY --from=build /app/out .
+
+# ENV LD_LIBRARY_PATH=/app/out
+# RUN apt-get update -y
+# RUN apt-get install -y librdkraft-dev
+# RUN apt-get install -y libc-dev
+
+ENTRYPOINT ["./redis-memcache-migration"]

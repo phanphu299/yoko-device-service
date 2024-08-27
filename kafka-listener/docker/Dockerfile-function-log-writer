@@ -1,0 +1,15 @@
+FROM dxpprivate.azurecr.io/ahi-build:6.0-alpine3.19 AS installer-env
+WORKDIR .
+COPY NuGet.Config ./NuGet.Config
+COPY function-log-writer/*.csproj ./function/
+RUN dotnet restore ./function/*.csproj /property:Configuration=Release -nowarn:msb3202,nu1503
+
+COPY function-log-writer/ /function/
+RUN cd /function && \
+    mkdir -p /home/site/wwwroot && \
+    dotnet publish *.csproj --no-restore -c Release --output /home/site/wwwroot
+
+# To enable ssh & remote debugging on app service change the base image to the one below
+# FROM mcr.microsoft.com/azure-functions/dotnet:3.0-appservice
+FROM dxpprivate.azurecr.io/ahi-function:6.0-host4.28.4
+COPY --from=installer-env ["/home/site/wwwroot", "/home/site/wwwroot"]

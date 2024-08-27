@@ -1,0 +1,43 @@
+PRODUCER topic1-producer
+topic: ingestion
+{
+	"message": {
+		"topicName": "ingestion-exchange",
+		"rawData": {
+			"txt": "2txt",
+			"subscriptionId": "57bd3ce2-6c1f-4031-b00d-1f42210c9749",
+			"timestamp": "1711684746478",
+			"humidity": "75.60097284960085",
+			"tenantId": "83fbbef9-988f-4033-b0e2-ad97815e8e1d",
+			"messageId": "1",
+			"deviceId": "device-id-for-dummy-data",
+			"ack": "False",
+			"intValue": "2",
+			"projectId": "066964d2-8bf0-4245-842d-17d87ad19973",
+			"snr": "2",
+			"temperature": "30.99992240882214"
+		},
+		"actionType": 1
+	}
+}
+
+{
+	"message": {
+		"topicName": "ingestion-exchange",
+		"rawData": {
+			"txt": "2txt",
+			"subscriptionId": "57bd3ce2-6c1f-4031-b00d-1f42210c9749",
+			"timestamp": "1711684746478",
+			"humidity": "75.60097284960085",
+			"tenantId": "83fbbef9-988f-4033-b0e2-ad97815e8e1d",
+			"messageId": "1",
+			"deviceId": "device-id-for-dummy-data",
+			"ack": "False",
+			"intValue": "2",
+			"projectId": "066964d2-8bf0-4245-842d-17d87ad19973",
+			"snr": "2",
+			"temperature": "30.99992240882214"
+		},
+		"actionType": 1
+	}
+}

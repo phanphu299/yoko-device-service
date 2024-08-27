@@ -1,0 +1,16 @@
+{
+  "generatedBy": "Microsoft.NET.Sdk.Functions.Generator-4.2.0",
+  "configurationSource": "attributes",
+  "bindings": [
+    {
+      "type": "rabbitMQTrigger",
+      "connectionStringSetting": "RabbitMQ",
+      "queueName": "ingestion",
+      "disableCertificateValidation": false,
+      "name": "data"
+    }
+  ],
+  "disabled": false,
+  "scriptFile": "../bin/Function.dll",
+  "entryPoint": "AHI.Device.Function.Trigger.RabbitMQ.ProcessRabbitMQMessage.RunAsync"
+}

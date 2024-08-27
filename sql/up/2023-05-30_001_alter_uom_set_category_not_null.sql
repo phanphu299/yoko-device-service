@@ -1,0 +1,1 @@
+ALTER TABLE uoms ALTER COLUMN lookup_code SET NOT NULL;

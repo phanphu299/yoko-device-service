@@ -1,0 +1,83 @@
+version: "3"
+services:
+  promscale:
+    image: "timescale/promscale:0.15.0"
+    restart: on-failure
+    ports:
+      - "9201:9201"
+      - "9202:9202"
+    environment:
+      PROMSCALE_DB_HOST: postgresdb
+      PROMSCALE_DB_PASSWORD: "Pass1234!"
+      PROMSCALE_DB_PORT: 5432
+      PROMSCALE_DB_NAME: postgres
+      PROMSCALE_DB_SSL_MODE: disable
+    depends_on:
+      - postgresdb
+    networks:
+      - docker_backend
+  elasticsearch:
+    container_name: elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.4.3
+    environment:
+      - "discovery.type=single-node"
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+    networks:
+      - docker_backend
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.4.3
+    depends_on:
+      - elasticsearch
+    networks:
+      - docker_backend
+    ports:
+      - "5601:5601"
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.62.1
+    command: ["--config=/etc/otel-collector-config.yaml"]
+    volumes:
+      - ../otel/otel-collector-config.yaml:/etc/otel-collector-config.yaml
+      #- ../otel/http_ca.crt:/etc/http_ca.crt
+    restart: on-failure
+    ports:
+      - "4317:4317"   # OTLP gRPC receiver
+      - "4318:4318"   # OTLP http receiver
+    networks:
+      - docker_backend 
+    depends_on:
+      - postgresdb
+      - promscale
+  jaeger-query:
+    image: jaegertracing/jaeger-query:1.38
+    restart: on-failure
+    environment:
+      SPAN_STORAGE_TYPE: grpc-plugin
+      GRPC_STORAGE_SERVER: promscale:9202
+    ports:
+       - 16686:16686
+    networks:
+       - docker_backend 
+    depends_on:
+      - postgresdb
+      - promscale
+      - otel-collector
+  grafana:
+    image: grafana/grafana-oss:9.1.8
+    restart: on-failure
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: "Pass1234!"
+    volumes:
+      - ../grafana/datasources/:/etc/grafana/provisioning/datasources/
+      - ../grafana/dashboards/:/etc/grafana/provisioning/dashboards/
+      - ../grafana/apm/:/var/lib/grafana/dashboards/apm/
+    ports:
+       - 3005:3000
+    networks:
+       - docker_backend 
+    depends_on:
+      - postgresdb
+      - promscale
+      - otel-collector      

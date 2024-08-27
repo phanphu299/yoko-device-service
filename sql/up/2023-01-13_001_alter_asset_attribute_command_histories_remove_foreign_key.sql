@@ -1,0 +1,1 @@
+alter table asset_attribute_command_histories drop constraint fk_asset_attribute_command_histories_attribute_id;

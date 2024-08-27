@@ -1,0 +1,452 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Api/Device.Api.csproj": {}
+  },
+  "projects": {
+    "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Api/Device.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Api/Device.Api.csproj",
+        "projectName": "Device.Api",
+        "projectPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Api/Device.Api.csproj",
+        "packagesPath": "/Users/phuphan/.nuget/packages/",
+        "outputPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/phuphan/Yokogawa/Asset Management/device-service/NuGet.Config",
+          "/Users/phuphan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AssetHealthInsights/_packaging/AssetHealthInsights/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AssetHealthInsights/_packaging/AssetHealthInsights/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/Device.Application.csproj": {
+                "projectPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/Device.Application.csproj"
+              },
+              "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/Device.Persistence.csproj": {
+                "projectPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/Device.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Datadog.Trace.Bundle": {
+              "target": "Package",
+              "version": "[2.48.0, )"
+            },
+            "IdentityServer4.AccessTokenValidation": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "MessagePack": {
+              "target": "Package",
+              "version": "[2.5.140, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Serilog.Enrichers.Thread": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "System.Text.Encodings.Web": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "prometheus-net.AspNetCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "prometheus-net.SystemMetrics": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-arm64",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/Device.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/Device.Application.csproj",
+        "projectName": "Device.Application",
+        "projectPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/Device.Application.csproj",
+        "packagesPath": "/Users/phuphan/.nuget/packages/",
+        "outputPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/phuphan/Yokogawa/Asset Management/device-service/NuGet.Config",
+          "/Users/phuphan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AssetHealthInsights/_packaging/AssetHealthInsights/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AssetHealthInsights/_packaging/AssetHealthInsights/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Domain/Device.Domain.csproj": {
+                "projectPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Domain/Device.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "AHI.Infrastructure.Audit": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "AHI.Infrastructure.Bus.RabbitMQ": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "AHI.Infrastructure.Cache.Redis": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "AHI.Infrastructure.Interceptor": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "AHI.Infrastructure.Security": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "AHI.Infrastructure.Service": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "AHI.Infrastructure.Service.Dapper": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "AHI.Infrastructure.Service.Tag": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "AHI.Infrastructure.Validation": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "MathNet.Numerics": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "MessagePack": {
+              "target": "Package",
+              "version": "[2.5.140, )"
+            },
+            "Microsoft.AspNetCore.JsonPatch": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "Microsoft.Azure.Devices": {
+              "target": "Package",
+              "version": "[1.37.0, )"
+            },
+            "Microsoft.Azure.Devices.Client": {
+              "target": "Package",
+              "version": "[1.40.0, )"
+            },
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "Quartz": {
+              "target": "Package",
+              "version": "[3.7.0, )"
+            },
+            "System.Threading.Channels": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "prometheus-net": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Domain/Device.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Domain/Device.Domain.csproj",
+        "projectName": "Device.Domain",
+        "projectPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Domain/Device.Domain.csproj",
+        "packagesPath": "/Users/phuphan/.nuget/packages/",
+        "outputPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/phuphan/Yokogawa/Asset Management/device-service/NuGet.Config",
+          "/Users/phuphan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AssetHealthInsights/_packaging/AssetHealthInsights/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AssetHealthInsights/_packaging/AssetHealthInsights/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "AHI.Infrastructure.Repository": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "AHI.Infrastructure.Service.Tag": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/Device.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/Device.Persistence.csproj",
+        "projectName": "Device.Persistence",
+        "projectPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/Device.Persistence.csproj",
+        "packagesPath": "/Users/phuphan/.nuget/packages/",
+        "outputPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/phuphan/Yokogawa/Asset Management/device-service/NuGet.Config",
+          "/Users/phuphan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AssetHealthInsights/_packaging/AssetHealthInsights/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AssetHealthInsights/_packaging/AssetHealthInsights/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/Device.Application.csproj": {
+                "projectPath": "/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/Device.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "AHI.Infrastructure.Service.Tag.PostgreSql": {
+              "target": "Package",
+              "version": "[2.1.5-rc57, )"
+            },
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.5, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[5.0.14, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

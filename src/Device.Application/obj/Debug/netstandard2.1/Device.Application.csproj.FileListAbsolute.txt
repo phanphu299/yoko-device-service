@@ -1,0 +1,14 @@
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/bin/Debug/netstandard2.1/Device.Application.deps.json
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/bin/Debug/netstandard2.1/Device.Application.dll
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/bin/Debug/netstandard2.1/Device.Application.pdb
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/bin/Debug/netstandard2.1/Device.Domain.dll
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/bin/Debug/netstandard2.1/Device.Domain.pdb
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/obj/Debug/netstandard2.1/Device.Application.csproj.AssemblyReference.cache
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/obj/Debug/netstandard2.1/Device.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/obj/Debug/netstandard2.1/Device.Application.AssemblyInfoInputs.cache
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/obj/Debug/netstandard2.1/Device.Application.AssemblyInfo.cs
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/obj/Debug/netstandard2.1/Device.Application.csproj.CoreCompileInputs.cache
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/obj/Debug/netstandard2.1/Device.Application.sourcelink.json
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/obj/Debug/netstandard2.1/Device.A.97846DB6.Up2Date
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/obj/Debug/netstandard2.1/Device.Application.dll
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Application/obj/Debug/netstandard2.1/Device.Application.pdb

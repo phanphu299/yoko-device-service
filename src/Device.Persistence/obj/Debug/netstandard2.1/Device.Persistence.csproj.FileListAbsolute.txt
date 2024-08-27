@@ -1,0 +1,16 @@
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/bin/Debug/netstandard2.1/Device.Persistence.deps.json
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/bin/Debug/netstandard2.1/Device.Persistence.dll
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/bin/Debug/netstandard2.1/Device.Persistence.pdb
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/bin/Debug/netstandard2.1/Device.Application.dll
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/bin/Debug/netstandard2.1/Device.Domain.dll
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/bin/Debug/netstandard2.1/Device.Application.pdb
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/bin/Debug/netstandard2.1/Device.Domain.pdb
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/obj/Debug/netstandard2.1/Device.Persistence.csproj.AssemblyReference.cache
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/obj/Debug/netstandard2.1/Device.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/obj/Debug/netstandard2.1/Device.Persistence.AssemblyInfoInputs.cache
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/obj/Debug/netstandard2.1/Device.Persistence.AssemblyInfo.cs
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/obj/Debug/netstandard2.1/Device.Persistence.csproj.CoreCompileInputs.cache
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/obj/Debug/netstandard2.1/Device.Persistence.sourcelink.json
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/obj/Debug/netstandard2.1/Device.P.75EC19BB.Up2Date
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/obj/Debug/netstandard2.1/Device.Persistence.dll
+/Users/phuphan/Yokogawa/Asset Management/device-service/src/Device.Persistence/obj/Debug/netstandard2.1/Device.Persistence.pdb

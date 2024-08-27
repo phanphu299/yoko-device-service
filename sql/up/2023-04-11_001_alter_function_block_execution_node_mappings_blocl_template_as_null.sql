@@ -1,0 +1,1 @@
+alter table function_block_execution_node_mappings ALTER COLUMN block_template_node_id DROP NOT NULL;

@@ -1,0 +1,51 @@
+resources:
+  repositories:
+  - repository: PipelineTemplateServiceRepository
+    endpoint: GitServiceAcconnection
+    type: git
+    name: AHI Pipeline Template/pipeline-template-service
+    ref: master
+  - repository: HelmChartRepository
+    endpoint: GitServiceAcconnection
+    type: git
+    name: Asset DevOps - Helm/helm-chart
+    ref: sandbox
+
+trigger:
+  branches:
+    include:
+    - features/*/develop
+    - master
+  paths:
+    include:
+      - src/*
+      - tests/*
+      - sql/*    
+    exclude:
+      - src/Device.Job/*
+
+pool:
+  name: 'DXP Hosted BE'
+
+parameters:
+  - name: Platform
+    displayName: Platform
+    type: string
+    default: 'Azure'
+    values:
+      - 'All'
+      - 'Azure'
+      # - 'AWS'
+      # - 'Alibaba'
+  - name: DockerFile
+    displayName: DockerFile
+    type: string
+    default: 'docker/Dockerfile-migration'
+
+stages:
+- template: migration-build-templates.yml@PipelineTemplateServiceRepository
+  parameters:
+    Platform: ${{ parameters.Platform }}
+    DockerFile: ${{ parameters.DockerFile }}
+    ServiceName: 'device-service'
+    HasMigrationScript: 'yes'

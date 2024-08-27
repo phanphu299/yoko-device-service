@@ -1,0 +1,51 @@
+apiVersion: 1
+
+providers:
+  - name: 'overview'
+    allowUiUpdates: false
+    disableDeletion: true
+    options:
+      path: /var/lib/grafana/dashboards/apm/overview.json
+      foldersFromFilesStructure: false
+  - name: 'service map'
+    allowUiUpdates: false
+    disableDeletion: true
+    options:
+      path: /var/lib/grafana/dashboards/apm/servicemap.json
+      foldersFromFilesStructure: false
+  - name: 'downstream'
+    allowUiUpdates: false
+    disableDeletion: true
+    options:
+      path: /var/lib/grafana/dashboards/apm/downstream.json
+      foldersFromFilesStructure: false
+  - name: 'upstream'
+    allowUiUpdates: false
+    disableDeletion: true
+    options:
+      path: /var/lib/grafana/dashboards/apm/upstream.json
+      foldersFromFilesStructure: false
+  - name: 'servicedetail'
+    allowUiUpdates: false
+    disableDeletion: true
+    options:
+      path: /var/lib/grafana/dashboards/apm/servicedetail.json
+      foldersFromFilesStructure: false
+  - name: 'prometheus'
+    allowUiUpdates: false
+    disableDeletion: true
+    options:
+      path: /var/lib/grafana/dashboards/apm/prometheus.json
+      foldersFromFilesStructure: false
+  - name: 'controller'
+    allowUiUpdates: false
+    disableDeletion: true
+    options:
+      path: /var/lib/grafana/dashboards/apm/controller.json
+      foldersFromFilesStructure: false
+  - name: 'prometheusnet'
+    allowUiUpdates: false
+    disableDeletion: true
+    options:
+      path: /var/lib/grafana/dashboards/apm/prometheusnet.json
+      foldersFromFilesStructure: false

@@ -1,0 +1,1 @@
+ALTER TABLE media ALTER COLUMN content_type DROP NOT NULL;

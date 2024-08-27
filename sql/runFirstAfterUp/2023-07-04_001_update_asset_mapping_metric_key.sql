@@ -1,0 +1,11 @@
+update asset_attribute_dynamic_mapping
+set metric_key = asset_attribute_template_dynamics.metric_key
+from asset_attribute_template_dynamics
+where asset_attribute_dynamic_mapping.asset_attribute_template_id = asset_attribute_template_dynamics.asset_attribute_template_id
+and (asset_attribute_dynamic_mapping.metric_key is null or asset_attribute_dynamic_mapping.metric_key = '');
+
+update asset_attribute_command_mapping
+set metric_key = asset_attribute_template_commands.metric_key
+from asset_attribute_template_commands
+where asset_attribute_command_mapping.asset_attribute_template_id = asset_attribute_template_commands.asset_attribute_template_id
+and (asset_attribute_command_mapping.metric_key is null or asset_attribute_command_mapping.metric_key = '');

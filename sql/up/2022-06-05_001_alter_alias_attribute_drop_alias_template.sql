@@ -1,0 +1,3 @@
+alter table asset_attribute_alias drop column alias_attribute_template_id;
+alter table asset_attribute_alias drop column parent_id;
+alter table asset_attribute_alias drop constraint  fk_asset_attribute_alias_alias_attribute_id;

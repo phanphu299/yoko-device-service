@@ -1,0 +1,18 @@
+# SDK build image
+FROM dxpprivate.azurecr.io/ahi-build:6.0-alpine3.19 AS build
+WORKDIR .
+COPY NuGet.Config ./NuGet.Config
+COPY src/Device.Api/*.csproj         ./src/Device.Api/
+COPY src/Device.Application/*.csproj ./src/Device.Application/
+COPY src/Device.Domain/*.csproj      ./src/Device.Domain/
+COPY src/Device.Persistence/*.csproj ./src/Device.Persistence/
+RUN dotnet restore ./src/Device.Api/*.csproj /property:Configuration=Release -nowarn:msb3202,nu1503
+
+COPY src/ ./src
+RUN dotnet publish ./src/Device.Api/*.csproj --no-restore -c Release -o /app/out
+
+# Run time image
+FROM dxpprivate.azurecr.io/ahi-runtime:6.0-alpine3.19 as final
+WORKDIR /app
+COPY --from=build /app/out .
+ENTRYPOINT ["dotnet", "Device.Api.dll"]

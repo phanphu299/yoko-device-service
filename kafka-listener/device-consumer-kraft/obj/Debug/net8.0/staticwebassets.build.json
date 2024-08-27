@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "/M8e3upjfKhAfOvzLYac+vkAGL4XUHnsveLYbm555FU=",
+  "Source": "Device.Consumer.Kraft",
+  "BasePath": "_content/Device.Consumer.Kraft",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

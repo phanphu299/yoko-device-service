@@ -1,0 +1,1 @@
+update devices set signal_quality_code = 192, last_heartbeat_timestamp = current_timestamp where signal_quality_code is null;

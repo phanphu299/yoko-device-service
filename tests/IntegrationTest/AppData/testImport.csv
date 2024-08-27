@@ -1,0 +1,8 @@
+scope,deviceId,deviceName,deviceDescription,templateId,statusId
+1,f7341876-9af6-4245-be76-6ac9adfc2210,d-1111,Import Data,1,0
+1,f7341876-9af6-4245-be76-6ac9adfc2210,d-1112,Import Data,1,0
+1,420efe23-ef02-4664-a0f4-a4b31c0c81a4,d-1113,Import Data,9999,0
+2,f7341876-9af6-4245-be76-6ac9adfc2210,d-1110,Import Data,1,0
+2,f7341876-9af6-4245-be76-6ac9adfc2210,d-1114,Import Data,9999,0
+0,f7341876-9af6-4245-be76-6ac9adfc2210,,,,
+0,420efe23-ef02-4664-a0f4-a4b31c0c81a4,,,,

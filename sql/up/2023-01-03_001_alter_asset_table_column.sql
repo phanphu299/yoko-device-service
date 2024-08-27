@@ -1,0 +1,1 @@
+alter table asset_table_columns alter column default_value type text;

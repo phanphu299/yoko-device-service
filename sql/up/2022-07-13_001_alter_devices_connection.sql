@@ -1,0 +1,1 @@
+ALTER TABLE devices ADD COLUMN broker_project_id uuid;

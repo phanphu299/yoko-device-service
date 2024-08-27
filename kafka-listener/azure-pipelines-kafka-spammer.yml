@@ -1,0 +1,148 @@
+pool:
+  name: 'DXP Hosted Function'
+
+parameters:
+  - name: SynkTestContainer
+    displayName: Security test container with Synk
+    type: string
+    default: 'no'
+    values:
+      - 'yes'
+      - 'no'
+  - name: Platform
+    displayName: Platform
+    type: string
+    default: 'Azure'
+    values:
+      - 'All'
+      - 'Azure'
+      # - 'AWS'
+      # - 'Alibaba'
+
+variables:
+  serviceName: $(Build.DefinitionName)
+  acrName: dxpprivate.azurecr.io
+  # aliAcrName: dxpprivate-registry.cn-shanghai.cr.aliyuncs.com
+  # aliSGAcrName: dxpprivate-registry.ap-southeast-1.cr.aliyuncs.com
+  # awsRegion: ap-southeast-1
+  # ecrRegistry: 308741399797.dkr.ecr.ap-southeast-1.amazonaws.com
+  dockerFile: kafka-listener/docker/Dockerfile-kafka-spammer
+  isMain: $[eq(variables['Build.SourceBranch'], 'refs/heads/master')]
+  isDevelop: $[eq(variables['Build.SourceBranch'], 'refs/heads/features/dev/develop')]
+  synkOrganization: assethealthinsights
+
+steps:
+- checkout: self
+  clean: true
+  fetchDepth: -1
+
+- script: mono $(Agent.WorkFolder)/_tool/GitVersion/GitVersion.exe /output buildserver /nofetch
+  displayName: 'Fetch Version'
+
+- task: DownloadSecureFile@1
+  name: NuGet
+  displayName: 'Download NuGet.Config'
+  inputs:
+    secureFile: 'NuGet.Config'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Agent.TempDirectory)'
+    Contents: NuGet.Config
+    TargetFolder: '$(Build.SourcesDirectory)'
+    OverWrite: true
+    
+- task: Docker@2
+  displayName: Login to ACR
+  inputs:
+    command: login
+    containerRegistry: ACR service connection
+
+
+- task: Bash@3
+  displayName: 'Build Image'
+  inputs:
+    targetType: 'inline'
+    script: |
+      cp docker/$(dockerFile) $(dockerFile)
+      docker build -t $(serviceName):$(GitVersion.SemVer) -f $(dockerFile) .
+
+- task: Bash@3
+  displayName: 'Tag docker image for Azure'
+  condition: or(eq('${{ parameters.Platform }}', 'All'), eq('${{ parameters.Platform }}', 'Azure'), eq(variables.isMain, 'True'))
+  inputs:
+    targetType: 'inline'
+    script: |
+      docker tag $(serviceName):$(GitVersion.SemVer) $(acrName)/$(serviceName):$(GitVersion.SemVer)
+
+
+
+- task: Bash@3
+  displayName: 'Tag latest image'
+  condition: and(or(eq('${{ parameters.Platform }}', 'All'), eq('${{ parameters.Platform }}', 'Azure')), eq(variables.isDevelop, 'True'))
+  inputs:
+    targetType: 'inline'
+    script: |
+      docker tag $(serviceName):$(GitVersion.SemVer) $(acrName)/$(serviceName):latest
+
+- task: SnykSecurityScan@1
+  displayName: Synk container testing
+  condition: or(eq('${{ parameters.SynkTestContainer }}', 'yes'), eq(variables.isMain, 'True'))
+  inputs:
+    organization: $(synkOrganization)
+    serviceConnectionEndpoint: 'snykToken'
+    testType: 'container'
+    dockerImageName: $(serviceName):$(GitVersion.SemVer)
+    dockerfilePath: $(dockerFile)
+    additionalArguments: "--target-reference=$(serviceName)"
+    monitorWhen: 'always'
+    projectName: Image:$(serviceName)
+    failOnIssues: false
+
+- task: Docker@2
+  displayName: Push to ACR
+  condition: or(eq('${{ parameters.Platform }}', 'All'), eq('${{ parameters.Platform }}', 'Azure'), eq(variables.isMain, 'True'))
+  inputs:
+    command: push
+    containerRegistry: ACR service connection
+    repository: $(serviceName)
+    tags: |
+      $(GitVersion.SemVer)
+
+# - task: Docker@2
+#   displayName: Push to Alibaba ACR
+#   condition: or(eq('${{ parameters.Platform }}', 'All'), eq('${{ parameters.Platform }}', 'Alibaba'), eq(variables.isMain, 'True'))
+#   inputs:
+#     command: push
+#     containerRegistry: Alibaba ACR service connection
+#     repository: ahi/$(serviceName)
+#     tags: |
+#       $(GitVersion.SemVer)
+
+# - task: Docker@2
+#   displayName: Push to Alibaba SG ACR
+#   condition: or(eq('${{ parameters.Platform }}', 'All'), eq('${{ parameters.Platform }}', 'Alibaba'), eq(variables.isMain, 'True'))
+#   inputs:
+#     command: push
+#     containerRegistry: Alibaba SG ACR service connection
+#     repository: ahi/$(serviceName)
+#     tags: |
+#       $(GitVersion.SemVer)
+
+# - task: Bash@3
+#   displayName: 'Push to AWS ECR'
+#   condition: or(eq('${{ parameters.Platform }}', 'All'), eq('${{ parameters.Platform }}', 'AWS'), eq(variables.isMain, 'True'))
+#   inputs:
+#     targetType: 'inline'
+#     script: |
+#       docker push $(ecrRegistry)/$(serviceName):$(GitVersion.SemVer)
+
+- task: Docker@2
+  displayName: Push latest image to ACR
+  condition: and(or(eq('${{ parameters.Platform }}', 'All'), eq('${{ parameters.Platform }}', 'Azure')), eq(variables.isDevelop, 'True'))
+  inputs:
+    command: push
+    containerRegistry: ACR service connection
+    repository: $(serviceName)
+    tags: |
+      latest
